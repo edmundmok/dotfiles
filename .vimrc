@@ -106,6 +106,4 @@ set autoread        " autoreload file if file was changed outside vim
 
 " leader settings
 let mapleader = ","
-set showcmd
-noremap <leader>w :w    " easy save
-noremap <leader>wq :wq  " easy save and exit
+set showcmd         " display cmd inputs, for leader ack
