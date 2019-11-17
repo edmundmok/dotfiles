@@ -86,9 +86,11 @@ set nu
 set relativenumber
 
 " line length guide configurations
-set colorcolumn=80
-" change line length guide to grey
-highlight ColorColumn ctermbg=0 guibg=lightgrey  
+if exists('+colorcolumn')
+    set colorcolumn=80
+    " change line length guide to grey
+    highlight ColorColumn ctermbg=0 guibg=lightgrey  
+endif
 
 "tab settings
 set tabstop=4		" width that a <TAB> character displays as
@@ -116,3 +118,11 @@ set autoread        " autoreload file if file was changed outside vim
 let mapleader = ","
 set showcmd         " display cmd inputs, for visual confirmation of leader cmds
 
+" highlight trailing whitespace
+" https://vim.fandom.com/wiki/Highlight_unwanted_spaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
