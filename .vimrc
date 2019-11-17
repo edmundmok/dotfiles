@@ -26,10 +26,29 @@ Plugin 'itchyny/lightline.vim'
 
     function! LightLineGitBranchName()
         " add this cool symbol before git branch name
-        return exists('*fugitive#head') ? ' ' . fugitive#head() : ''
+        return exists('*fugitive#head') ? (' ' . fugitive#head()) : ''
     endfunction
 
+Plugin 'jiangmiao/auto-pairs' " parens created in pairs
+Plugin 'scrooloose/nerdtree' " file directory in vim
 
+    " Configure NERDTree plugin
+    map <C-N> :NERDTreeToggle<CR> " map toggle NERDTree to Ctrl + n
+    let NERDTreeShowHidden=1 " show hidden files by default
+
+Plugin 'tpope/vim-surround' " add 'surround' functionality, to modify a 'surrounding' object
+Plugin 'Xuyuanp/nerdtree-git-plugin' " display Git status flags beside files in NERDTree
+Plugin 'airblade/vim-gitgutter' " shows git diff symbols in gutter
+
+    " Configure vim-gitguttter plugin
+    set updatetime=100  " update diff markers in 100ms
+    "let g:gitgutter_override_sign_column_highlight = 0
+    "highlight clear SignColumn
+    "highlight GitGutterAdd ctermfg=2
+    "highlight GitGutterChange ctermfg=3
+    "highlight GitGutterDelete ctermfg=1
+    "highlight GitGutterChangeDelete ctermfg=4
+    
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
