@@ -12,6 +12,23 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Keep Plugin commands between vundle#begin/end.
 Plugin 'tpope/vim-fugitive' " git integration
+Plugin 'itchyny/lightline.vim'
+
+    " Configure lightline plugin
+    let g:lightline = {
+                \ 'active': {
+                \   'left': [['mode', 'paste'], ['gitbranch', 'readonly', 'filename', 'modified']]
+                \ },
+                \ 'component_function': {
+                \   'gitbranch': 'LightLineGitBranchName'
+                \ },
+                \ }
+
+    function! LightLineGitBranchName()
+        " add this cool symbol before git branch name
+        return exists('*fugitive#head') ? ' ' . fugitive#head() : ''
+    endfunction
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -33,13 +50,24 @@ filetype plugin indent on    " required
 " enable syntax higlighting
 syntax on
 
-"let g:airline_powerline_fonts = 1
-
 " always display status line
 set laststatus=2
+
+" disable -- INSERT --, -- VISUAL LINE -- indicators since lightline already
+" displays them 
+set noshowmode
 
 " turn on line numbers
 set nu
 
 " turn on relative line numbers for lines other than current cursor line
 set relativenumber
+
+" tab settings
+set tabstop=4		" width that a <TAB> character displays as
+set expandtab		" convert <TAB> key-presses to spaces
+set shiftwidth=4	" number of spaces to use for each step of (auto) indent
+set softtabstop=4	" backspace after pressing <TAB> will remove up to this many spaces
+
+set autoindent		" copy indent from current line when starting a new line
+set smartindent		" smart autoindent (e.g. add indent after '{')
