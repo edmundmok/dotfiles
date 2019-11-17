@@ -90,3 +90,22 @@ set softtabstop=4	" backspace after pressing <TAB> will remove up to this many s
 
 set autoindent		" copy indent from current line when starting a new line
 set smartindent		" smart autoindent (e.g. add indent after '{')
+
+set encoding=utf-8
+set showmatch       " jump to matching braces upon closing (for visual confirmation)
+set matchtime=3     " time in tenth of a second to showmatch above
+
+" search settings
+set incsearch       " search as characters are entered
+set hlsearch        " highlight matches
+set ignorecase      " case-insensitive search
+set smartcase       " if case is used, only find case-matching
+
+set cursorline      " highlight current line
+set autoread        " autoreload file if file was changed outside vim
+
+" leader settings
+let mapleader = ","
+set showcmd
+noremap <leader>w :w    " easy save
+noremap <leader>wq :wq  " easy save and exit
