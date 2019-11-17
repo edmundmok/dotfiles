@@ -4,6 +4,9 @@ export ZSH="${HOME}/.oh-my-zsh"
 # Enable 256 colors support
 export TERM=xterm-256color
 
+# Homebrew PATH
+export PATH=/usr/local/bin:$PATH
+
 ZSH_THEME="agnoster"
 
 plugins=(git)
@@ -43,7 +46,7 @@ alias du="du -h -c"
 # tmux aliases
 alias ta="tmux attach"
 alias tat="tmux attach -t"
-alias td="tmux dettach"
+alias td="tmux detach"
 alias tl="tmux ls"
 alias tn="tmux new-session -s"
 alias tk="tmux kill-session -t"
@@ -54,6 +57,7 @@ alias tmc="${EDITOR} ~/.tmux.conf"
 alias zrc="${EDITOR} ~/.zshrc"
 
 alias v="vim" # too lazy to type 3 chars
+alias sz="source ~/.zshrc && echo '.zshrc reloaded'"
 
 # open apps from cmdline
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
