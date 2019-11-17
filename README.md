@@ -10,3 +10,5 @@
     - Make sure that your path lists `/usr/local/bin` before `/usr/bin`: `/usr/local/bin:/usr/bin`
     - `/usr/local/bin` is homebrew's path.
     - `which vim` should return `/usr/local/bin/vim` instead of `/usr/bin/vim`
+    - Why?
+        - `macvim` doesn't allow copy to system clipboard with e.g. `"*yy`
