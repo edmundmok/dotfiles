@@ -1,6 +1,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH="${HOME}/.oh-my-zsh"
 
+# Enable 256 colors support
+export TERM=xterm-256color
+
 ZSH_THEME="agnoster"
 
 plugins=(git)
@@ -49,6 +52,8 @@ alias tk="tmux kill-session -t"
 alias vrc="${EDITOR} ~/.vimrc"
 alias tmc="${EDITOR} ~/.tmux.conf"
 alias zrc="${EDITOR} ~/.zshrc"
+
+alias v="vim" # too lazy to type 3 chars
 
 # open apps from cmdline
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
