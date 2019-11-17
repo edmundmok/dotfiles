@@ -7,6 +7,6 @@
 4. Switch to a suitable Powerline font
 5. Remap Caps Lock to Control
 6. `brew install vim`
-    - Make sure that your path lists /usr/local/bin before /usr/bin: `/usr/local/bin:/usr/bin`
+    - Make sure that your path lists `/usr/local/bin` before `/usr/bin`: `/usr/local/bin:/usr/bin`
     - `/usr/local/bin` is homebrew's path.
     - `which vim` should return `/usr/local/bin/vim` instead of `/usr/bin/vim`
