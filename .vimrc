@@ -115,3 +115,4 @@ set autoread        " autoreload file if file was changed outside vim
 " leader settings
 let mapleader = ","
 set showcmd         " display cmd inputs, for visual confirmation of leader cmds
+
