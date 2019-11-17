@@ -48,7 +48,10 @@ Plugin 'airblade/vim-gitgutter' " shows git diff symbols in gutter
     "highlight GitGutterChange ctermfg=3
     "highlight GitGutterDelete ctermfg=1
     "highlight GitGutterChangeDelete ctermfg=4
-    
+
+Plugin 'tpope/vim-commentary' " easy comments
+
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -82,7 +85,12 @@ set nu
 " turn on relative line numbers for lines other than current cursor line
 set relativenumber
 
-" tab settings
+" line length guide configurations
+set colorcolumn=80
+" change line length guide to grey
+highlight ColorColumn ctermbg=0 guibg=lightgrey  
+
+"tab settings
 set tabstop=4		" width that a <TAB> character displays as
 set expandtab		" convert <TAB> key-presses to spaces
 set shiftwidth=4	" number of spaces to use for each step of (auto) indent
@@ -106,4 +114,4 @@ set autoread        " autoreload file if file was changed outside vim
 
 " leader settings
 let mapleader = ","
-set showcmd         " display cmd inputs, for leader ack
+set showcmd         " display cmd inputs, for visual confirmation of leader cmds
