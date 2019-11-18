@@ -95,7 +95,7 @@ if exists('+colorcolumn')
     highlight ColorColumn ctermbg=0 guibg=lightgrey
 endif
 
-"tab settings
+" tab settings
 set tabstop=4		" width that a <TAB> character displays as
 set expandtab		" convert <TAB> key-presses to spaces
 set shiftwidth=4	" number of spaces to use for each step of (auto) indent
