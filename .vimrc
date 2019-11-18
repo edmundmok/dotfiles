@@ -71,7 +71,7 @@ filetype plugin indent on    " required
 " vim theme
 set background=dark  " dark background
 colorscheme solarized
-"
+
 " enable syntax higlighting
 syntax on
 
