@@ -69,10 +69,7 @@ ZSHRC_PRIVATE="${HOME}/.zshrc.private"
 # shell doesn't expand tilde while using condition
 # so we need to use ${HOME} instead of ~
 # else, it will think file does not exist
-if [[ -r $ZSHRC_PRIVATE ]]; then
-    echo "reloading ${ZSHRC_PRIVATE}"
-    source $ZSHRC_PRIVATE
-fi
+[ -r $ZSHRC_PRIVATE ] && source $ZSHRC_PRIVATE && echo ".zshrc.private reloaded"
 
 # fzf key bindings
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
