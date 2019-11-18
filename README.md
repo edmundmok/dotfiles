@@ -12,3 +12,5 @@
     - `which vim` should return `/usr/local/bin/vim` instead of `/usr/bin/vim`
     - Why?
         - `macvim` doesn't allow copy to system clipboard with e.g. `"*yy`
+
+Add private `zsh` configs to `~/.zsh.private`
