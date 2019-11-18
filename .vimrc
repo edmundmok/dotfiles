@@ -68,7 +68,10 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-
+" vim theme
+set background=dark  " dark background
+colorscheme solarized
+"
 " enable syntax higlighting
 syntax on
 
@@ -76,7 +79,7 @@ syntax on
 set laststatus=2
 
 " disable -- INSERT --, -- VISUAL LINE -- indicators since lightline already
-" displays them 
+" displays them
 set noshowmode
 
 " turn on line numbers
