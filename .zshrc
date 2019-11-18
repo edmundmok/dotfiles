@@ -64,12 +64,15 @@ alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 # finally, load local zshrc (e.g. private stuff)
 # if exists and can read
-ZSHRC_PRIVATE="{$HOME}/.zshrc.private"
+ZSHRC_PRIVATE="${HOME}/.zshrc.private"
 
 # shell doesn't expand tilde while using condition
-# so we need to use $HOME instead of ~
+# so we need to use ${HOME} instead of ~
 # else, it will think file does not exist
 if [[ -r $ZSHRC_PRIVATE ]]; then
     echo "reloading ${ZSHRC_PRIVATE}"
     source $ZSHRC_PRIVATE
 fi
+
+# fzf key bindings
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
