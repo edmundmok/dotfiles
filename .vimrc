@@ -137,3 +137,7 @@ set backspace=indent,eol,start
 set list
 set listchars=
 set listchars+=trail:⋅
+
+" bind key to remove highlights ("redraw terminal screen")
+" search and replace highlights linger even after completion
+nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
