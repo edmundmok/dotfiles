@@ -74,3 +74,8 @@ ZSHRC_PRIVATE_PATH="${HOME}/${ZSHRC_PRIVATE_NAME}"
 
 # fzf key bindings
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# disable HIST_VERIFY on history expansion
+# so !! executes immediately instead of expanding into the actual
+# historical input
+setopt no_hist_verify
