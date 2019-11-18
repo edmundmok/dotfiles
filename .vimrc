@@ -89,7 +89,7 @@ set relativenumber
 if exists('+colorcolumn')
     set colorcolumn=80
     " change line length guide to grey
-    highlight ColorColumn ctermbg=0 guibg=lightgrey  
+    highlight ColorColumn ctermbg=0 guibg=lightgrey
 endif
 
 "tab settings
@@ -126,3 +126,11 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+
+" fix backspace for brew vim (not required on macvim)
+set backspace=indent,eol,start
+
+" display various whitespace characters
+set list
+set listchars=
+set listchars+=trail:⋅
