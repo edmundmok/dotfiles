@@ -55,6 +55,7 @@ alias tk="tmux kill-session -t"
 alias vrc="${EDITOR} ~/.vimrc"
 alias tmc="${EDITOR} ~/.tmux.conf"
 alias zrc="${EDITOR} ~/.zshrc"
+alias zrcp="${EDITOR} ~/.zshrc.private"
 
 alias v="vim" # too lazy to type 3 chars
 alias sz="source ~/.zshrc && echo '.zshrc reloaded'"
