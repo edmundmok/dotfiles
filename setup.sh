@@ -15,6 +15,8 @@ for file in .*; do
             echo "-- $EXIST_FILE already exists!"
 
             # check if dotfile is already a symlink
+            # apparently double quotes can be nested in bash
+            # see: https://unix.stackexchange.com/questions/289574/nested-double-quotes-in-highly-voted-one-liner
             if [ -L "$EXIST_FILE" ] && [ "$(readlink "$EXIST_FILE")" == "$REPO_FILE" ]; then
                 echo "-- $EXIST_FILE already points to $REPO_FILE!"
                 echo "-- Skipping!"
