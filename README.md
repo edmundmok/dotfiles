@@ -2,6 +2,7 @@
 
 ## Set-up
 1. Install iTerm2
+    - Go to iTerm Preferences → Profiles, select your profile, then the Keys tab. Click Load Preset... and choose Natural Text Editing.
 2. Download Solarized Dark colors (import to iTerm2 + move vim colors to `~/.vim/colors`)
 3. Install Powerline fonts
 4. Switch to a suitable Powerline font
