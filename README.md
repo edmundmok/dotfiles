@@ -15,5 +15,6 @@
         - `macvim` doesn't allow copy to system clipboard with e.g. `"*yy`
 7. Install `Vundle.vim`
 8. Install `oh-my-zsh`
+9. Install `tpm` (https://github.com/tmux-plugins/tpm)
 
 Add private `zsh` configs to `~/.zsh.private`
